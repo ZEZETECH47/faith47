@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: faith47
+    env: docker
+    plan: free
+    branch: main
+    repo: https://github.com/ZEZETECH47/faith47
+    dockerfilePath: ./Dockerfile
+    autoDeploy: true
