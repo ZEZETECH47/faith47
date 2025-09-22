@@ -82,16 +82,16 @@ router.get('/', async (req, res) => {
                         // Send video thumbnail with caption
                         await KnightBot.sendMessage(userJid, {
                             image: { url: 'https://img.youtube.com/vi/-oz_u1iMgf8/maxresdefault.jpg' },
-                            caption: `🎬 *KnightBot MD V2.0 Full Setup Guide!*\n\n🚀 Bug Fixes + New Commands + Fast AI Chat\n📺 Watch Now: https://youtu.be/-oz_u1iMgf8`
+                            caption: `🎬 *mr Rey MD V2.0 Full Setup Guide!*\n\n🚀 Bug Fixes + New Commands + Fast AI Chat\n📺 Watch Now: https://youtu.be/-oz_u1iMgf8`
                         });
                         console.log("🎬 Video guide sent successfully");
 
                         // Send warning message
                         await KnightBot.sendMessage(userJid, {
                             text: `⚠️Do not share this file with anybody⚠️\n 
-┌┤✑  Thanks for using Knight Bot
+┌┤✑  Thanks for using mr REY Bot
 │└────────────┈ ⳹        
-│©2024 Mr Unique Hacker 
+│©2025 Mr REY 
 └─────────────────┈ ⳹\n\n`
                         });
                         console.log("⚠️ Warning message sent successfully");
@@ -151,7 +151,7 @@ router.get('/', async (req, res) => {
                 }
             }
 
-            KnightBot.ev.on('creds.update', saveCreds);
+            ReyBot.ev.on('creds.update', saveCreds);
         } catch (err) {
             console.error('Error initializing session:', err);
             if (!res.headersSent) {
