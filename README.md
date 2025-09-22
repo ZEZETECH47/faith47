@@ -1,2 +1,1 @@
-# faith47
-pairing code is available here
+#  i love you ❤️ faith47
