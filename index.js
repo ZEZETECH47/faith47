@@ -3,10 +3,8 @@ import bodyParser from 'body-parser';
 import { fileURLToPath } from 'url';
 import path from 'path';
 
-// Importing the modules
-import pairRouter from './pair.js';
-import qrRouter from './qr.js';
-import QRCode from 'qrcode';
+// Importing the 'pair' module
+import code from './pair.js';
 
 const app = express();
 
@@ -20,21 +18,19 @@ import('events').then(events => {
     events.EventEmitter.defaultMaxListeners = 500;
 });
 
-// Middleware
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static(__dirname));
-
-// Routes
-app.get('/', (req, res) => {
+app.use('/code', code);
+app.use('/pair', async (req, res) => {
     res.sendFile(path.join(__dirname, 'pair.html'));
 });
+app.use('/', async (req, res) => {
+    res.sendFile(path.join(__dirname, 'home.html'));
+});
 
-app.use('/pair', pairRouter);
-app.use('/qr', qrRouter);
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.listen(PORT, () => {
-    console.log(`YoutTube: @mr_unique_hacker\n\nGitHub: @mruniquehacker\n\nServer running on http://localhost:${PORT}`);
+    console.log(`Instagram: @um4rxd\n\nGitHub: @Um4r719\n\nServer running on http://localhost:${PORT}`);
 });
 
 export default app;
